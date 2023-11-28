@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export const Company = mongoose.Schema({
+const Company = mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -18,4 +18,8 @@ export const Company = mongoose.Schema({
         type: String,
         required: true,
     }
+},{
+    timestamps:true,
+    versionKey:false
 })
+export default mongoose.model("Company", Company)
